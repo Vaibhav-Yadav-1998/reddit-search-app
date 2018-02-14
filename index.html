@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reddit Search</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+       <nav class="navbar navbar-dark bg-dark">
+           <a href="#" class="navbar-brand">Reddit Search</a>
+       </nav>
+        
+       <!-- message -->
+       <div class="alert alert-danger text-center container" role="alert" id="message">
+           Please add a search term !
+       </div>
+
+       <div class="container" id="search-container">
+           <div class="card card-body bg-light" id="search"> 
+               <h3>Search Reddit</h3>
+               <form id="search-form">
+                   <!-- search box -->
+                   <div class="form-group">
+                        <input type="text" id="search-input" class="form-control" placeholder="search">
+                   </div>  
+                   
+                   <!-- search sort options -->
+                   <div class="form-check form-check-inline">
+                       Sort By :
+                       <input type="radio" class="form-check-input ml-3" name="sortby" value="relevance" checked>
+                       <label class="form-check-label">Relevance</label>
+                   </div>
+
+                   <div class="form-check form-check-inline">
+                       <input type="radio" class="form-check-input ml-3" name="sortby" value="new">
+                       <label class="form-check-label">Latest</label>
+                   </div>
+
+                   <!-- number of search results options -->
+                   <h4 class="mt-3">Limit</h4>
+                   <div class="form-group">
+                       <select name="limit" id="limit" class="form-control">
+                           <option value="5">5</option>
+                           <option value="10">10</option>
+                           <option value="25">25</option>
+                           <option value="50">50</option>
+                           <option value="100">100</option>
+                       </select>
+                   </div>
+
+                   <button type="submit" class="btn btn-dark mt-4 btn-block">Search</button>
+               </form>
+           </div>
+       </div>
+
+       <!-- result section -->
+       <div id="results">
+
+       </div>
+
+
+       <script src="main.js"></script>
+</body>
+</html>
